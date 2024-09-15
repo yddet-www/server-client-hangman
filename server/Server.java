@@ -30,7 +30,7 @@ public class Server {
             // continuously listen for new connections
             while (true) {
                 Socket client_socket = server_socket.accept();
-                
+                System.out.println("New connection");
                 new ClientHandler(client_socket).start();   // make a thread
             }
         } catch (IOException e) {
