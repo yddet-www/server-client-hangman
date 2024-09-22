@@ -23,7 +23,7 @@ public class Hangman {
         String usr_input = input.toLowerCase();
 
         if (usr_input.length() != 1 || !Character.isLetter(usr_input.charAt(0))) {
-            return "Invalid input!\nPlease enter a single alphabetic character.";
+            return String.format("Invalid input! Please enter a single alphabetic character\n%s", get_state());
         }
 
         if (word.contains(usr_input)) {
